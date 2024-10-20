@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import SupabaseListener from "@/app/components/supabaseListener";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col min-h-screen">
+          <SupabaseListener />
           <main className="flex-1 container max-w-screen-sm mx-auto px-1 py-5">
             {children}
           </main>
